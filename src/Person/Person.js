@@ -14,6 +14,14 @@ const person = (props) => {
       <h5 onClick={props.click}>
         {/*/function click from class App */}
         Hi {props.name} aged {props.age} years. {isHobby}
+        {/* to move stateful component Person to stateless: 
+        const persons=(props)=>props.persons.map((person, index))=>
+                return <Person>
+                click={()=>props.clicked(index)}
+                name={person.name}
+            to pass argument to a function in functional component,
+                changed={(event)=> props.changed(event,person.id)} 
+          */}
       </h5>
       <input
         id="Input"
